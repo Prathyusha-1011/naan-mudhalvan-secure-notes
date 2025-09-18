@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Secure Notes App</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h2>🔒 Secure Notes</h2>
+    <textarea id="note" rows="5" placeholder="Write your secret note..."></textarea>
+    <input type="password" id="password" placeholder="Enter password">
+    
+    <div class="btn-group">
+      <button onclick="encryptNote()">Encrypt & Save</button>
+      <button onclick="decryptNote()">Decrypt & View</button>
+      <button class="clear" onclick="clearNotes()">Clear</button>
+    </div>
+
+    <div id="output"></div>
+  </div>
+
+  <!-- Import CryptoJS -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/crypto-js.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
